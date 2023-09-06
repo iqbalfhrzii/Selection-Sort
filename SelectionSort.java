@@ -29,13 +29,13 @@ public class SelectionSort {
             }
 
             if (minIndex != i) {
-                swapValues(i, minIndex);
+                swap(i, minIndex);
                 displayArray();
             }
         }
     }
 
-    private void swapValues(int i, int j) {
+    private void swap(int i, int j) {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;
@@ -56,11 +56,10 @@ public class SelectionSort {
         int[] arr = new int[n];
 
         Random random = new Random();
-        System.out.println("Angka acak:");
 
         for (int i = 0; i < n; i++) {
             arr[i] = random.nextInt(10000);
-        }
+        } 
 
         SelectionSort sorter = new SelectionSort(arr);
 
